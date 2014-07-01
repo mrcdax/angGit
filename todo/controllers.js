@@ -6,7 +6,7 @@ TodoController.controller('ctrl', ['$scope', function ($scope) {
     $scope.readonly = true;
     $scope.todos = [
         { id: 0, text: 'first todo', done: false },
-        { id: 1, text: 'second todo', done: true }
+        { id: 1, text: 'second todo', done: true } 
     ];
     //watch modifications on todos to update the localstorage
     $scope.$watch('todos', function (newval) {
