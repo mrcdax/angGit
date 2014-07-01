@@ -1,0 +1,88 @@
+﻿a{
+    text-decoration:none;
+    font-weight:bold;
+    color: rgb(145, 145, 145);
+}
+.app_container{
+    width:100%;
+    max-width:500px;
+    min-width:500px;
+    margin:0 auto;
+    border:1px solid grey;
+    padding:2px;
+}
+.app_header{
+    text-align:center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height:40px;
+    background:#27ae60;
+}
+.app_title{
+    line-height:40px;
+    padding:0;
+    margin:0;
+    color:#fff;
+    text-shadow:1px 1px 3px rgba(0,0,0,0.3);
+    filter:dropshadow(color=#000000, offx=1, offy=1);
+}
+.app_headline{
+    color:#999;
+    font-size:15px;
+}
+.app_body{
+    margin-top:40px;
+}
+.done-true{
+    text-decoration:line-through;
+    color:#9c2929;
+}
+.archive_control{
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    height:22px;
+    line-height:22px;
+    padding:5px 0 5px 10px;
+    background:#73c343;
+}
+table{
+    padding-left:0;
+    width:100%;
+}
+tr{
+    line-height:32px;
+    /*max-width:300px;*/
+    white-space:nowrap;
+}
+tr:nth-child(odd) { 
+    background: #ecf0f1; 
+}
+.first{
+    float:left; 
+}
+.second{
+    float:right;
+    padding-right:4px;
+}
+.todo_form{
+    padding:10px;
+    text-align:center;
+}
+#addInput{
+    border-bottom:1px solid rgba(0,0,0,0.3);
+    border-top:0;
+    border-right:0;
+    border-left:0;
+    height:30px;
+    /*width:100px;
+    max-width:400px;*/
+}
+input[type="submit"]{
+    height:30px;
+    text-align:center;
+    margin:10px;
+    /*width:120px;*/
+}
+th input[type="text"]{
+    background-color: transparent;
+    border:0 solid;
+    padding-left:2px;
+}

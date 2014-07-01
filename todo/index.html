@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app" ng-controller="ctrl">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div class="app_container">
+        <header class="app_header">
+            <h1 class="app_title">{{app_title}}</h1>
+            <h1 class="app_headline">{{app_headline}}</h1>
+        </header>
+        <section class="app_body">
+            <section class="archive_control">
+                <span>{{remaining()}} of {{todos.length}} remaining</span>
+                [<a href="" ng-click="archive()">clear completed</a>]
+            </section>
+            <table>
+                <tr ng-repeat="todo in todos">
+                    <th class="first">
+                        <input type="checkbox" ng-model="todo.done" /><input type="text" id="id{{todo.id}}" class="done-{{todo.done}}" ng-model="todo.text" readonly style="min-width:420px; text-overflow:ellipsis;" />
+                    </th>
+                    <th class="second"><a href="" id="btn{{todo.id}}" ng-click="edit(todo)">{{editsave}}</a></th>
+                </tr>
+            </table>
+            <form ng-submit="addTodo()" class="todo_form">
+                <input type="text" id="addInput" ng-model="todoText" size="30" placeholder="Add new todo" />
+                <br />
+                <input type="submit" value="Add task" />
+            </form>
+        </section>
+    </div>
+</body>
+</html>
