@@ -8,7 +8,7 @@ TodoController.controller('ctrl', ['$scope', function ($scope) {
         { id: 0, text: 'first todo', done: false },
         { id: 1, text: 'second todo', done: true } 
     ];
-    //watch modifications on todos to update the localstorage  
+    //watch modifications on todos to update the localstorage
     $scope.$watch('todos', function (newval) {
         for (var i = 0; i < $scope.todos.length; i++) {
             $scope.todos[i].id = i+1;
@@ -16,7 +16,7 @@ TodoController.controller('ctrl', ['$scope', function ($scope) {
         localStorage.setItem('todos', angular.toJson($scope.todos));
     }, true);
     if (localStorage.todos) {
-        $scope.todos = angular.fromJson(localStorage.todos); 
+        $scope.todos = angular.fromJson(localStorage.todos);
     }
 
     $scope.addTodo = function () {
