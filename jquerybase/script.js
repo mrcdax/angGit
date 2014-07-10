@@ -33,6 +33,12 @@ $(function () {
     $("#map").css({ "background-color": "cyan" }).text(arr.join("."));
     //iterate through array
     $(".each").each(function(){
-        console.log($(this).text());
+        console.log($(this).text()+"and has this attribute: "+$(this).attr("class"));
     });
+
+    //add classes
+    $("p").addClass("class");
+    $(".class").css("border", "1px solid yellow");
+    
+
 });
