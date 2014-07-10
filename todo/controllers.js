@@ -28,7 +28,7 @@ TodoController.controller('ctrl', ['$scope', function ($scope) {
             });
             $scope.todoText = '';
         }
-    }
+    };
 
     $scope.remaining = function () {
         var count = 0;
@@ -39,7 +39,7 @@ TodoController.controller('ctrl', ['$scope', function ($scope) {
     };
     $scope.archive = function () {
         var res = $scope.todos.filter(function (value) {
-            return value.done == false;
+            return value.done === false;
         });
         $scope.todos = res;
     };
