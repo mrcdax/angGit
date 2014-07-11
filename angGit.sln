@@ -66,6 +66,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "jquerybase", "http://localh
 		SlnRelativePath = "jquerybase\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "jqueryimageslider", "http://localhost:15970", "{954C23A6-3A97-465B-9F94-112814357A81}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_15970"
+		Debug.AspNetCompiler.PhysicalPath = "jqueryimageslider\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15970\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_15970"
+		Release.AspNetCompiler.PhysicalPath = "jqueryimageslider\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15970\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "jqueryimageslider\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +98,8 @@ Global
 		{7BD188D7-E5DD-454B-AA41-C2FF418BF657}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02418AFF-F87C-4C03-8CA4-D393FE5FD77D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{02418AFF-F87C-4C03-8CA4-D393FE5FD77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954C23A6-3A97-465B-9F94-112814357A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{954C23A6-3A97-465B-9F94-112814357A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

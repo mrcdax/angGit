@@ -1,2 +1,6 @@
-﻿body {
+﻿#animation{
+    position:absolute;
+    background-color: #abc;
+    width: 90px;
+    height: 90px;
 }

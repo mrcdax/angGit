@@ -40,5 +40,18 @@ $(function () {
     $("p").addClass("class");
     $(".class").css("border", "1px solid yellow");
     
-
+    //animate
+    $(document).keydown(function (e) {
+        switch (e.which) {
+            case 38: $("#animation").animate({ "top": "-=50px" }, "fast");
+                break;
+            case 40: $("#animation").animate({ "top": "+=50px" }, "fast");
+                break;
+            case 39: $("#animation").animate({ "left": "+=50px" }, "fast");
+                break;
+            case 37: $("#animation").animate({ "left": "-=50px" }, "fast");
+                break;
+        }
+    })
+    
 });
