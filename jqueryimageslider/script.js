@@ -1,4 +1,4 @@
-﻿$(function () {
+﻿$(window).load(function () {
     var timer = 3000;//ms between automatic transitions
     //comment this line to disable autoplay
     // intervalId = setInterval(cycleImage, slidetime);
@@ -22,7 +22,6 @@
         }
         $(".image_thumb ul li").removeClass("active");//remove active style from all the li's
         $(this).addClass("active");//add active style only to current li
-        timer = 3000;
         return false;//prevent default handler action
 
     }).hover(function () {
@@ -50,17 +49,16 @@
         } else {
             index = 0;
         }
-        timeout = setTimeout(slideshow, 3000);
+        timeout = setTimeout(slideshow, timer);
     };
     slideshow();
-    //TODO: fix missing block on refresh and firefox compatibility
 
     //pause on hover
     $(".main_image").hover(function () {
         clearTimeout(timeout);
     },
     function () {
-        setTimeout(slideshow, 3000);
+        setTimeout(slideshow, timer);
     });
 
     //slide bar with text
