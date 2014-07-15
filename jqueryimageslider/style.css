@@ -1,6 +1,8 @@
 ﻿body {
 	background: #1d1d1d;
 	font: 10px normal "Helvetica Neue", Arial, sans-serif;
+    margin:0;
+    overflow-x:hidden;
 }
 h1 {
 	font: 3em normal Georgia, "Times New Roman", Times, serif;
@@ -36,7 +38,7 @@ a {color: #fff;}
 .main_image h2{
     font-size:2em;
     font-weight:normal;
-    margin:0 0 5px;
+    margin:0 0 2px;
     padding:10px;
 }
 .main_image p{
@@ -46,7 +48,7 @@ a {color: #fff;}
     line-height:1.6em;
 }
 .block small{
-    padding:0 0 0 20px;
+    padding:0 0 0 10px;
     font-size:1em;
 }
 .main_image .block small{
@@ -112,4 +114,18 @@ html .image_thumb ul li h2{
     margin-left:10px;
     padding:0;
     width:180px;
+}
+#scroller{
+    height:25px;
+    width:100%;
+    background:#f0f0f0;
+    margin-top:10px;
+    font-size:17px;
+    line-height:25px;
+}
+#text{
+     display:inline;/*so we can get the text width*/
+     vertical-align:top;
+     position:relative;
+     left:0;
 }

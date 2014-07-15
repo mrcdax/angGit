@@ -1,7 +1,7 @@
-﻿$(function() {
+﻿$(function () {
     var timer = 3000;//ms between automatic transitions
     //comment this line to disable autoplay
-   // intervalId = setInterval(cycleImage, slidetime);
+    // intervalId = setInterval(cycleImage, slidetime);
     $(".main_image .desc").show();//show banner
     $(".main_image .block").animate({ opacity: 0.85 }, 1);//set opacity
     $(".imge_thumb ul li:first").addClass('active');
@@ -37,11 +37,12 @@
         $(".main_image .block").toggle("slow");
         $(this).text($(this).text() == "Hide description" ? "Show description" : "Hide description");
         return false;
-    })
+    });
 
     //auto slideshow
     var index = 0;
-    (function slideshow() {
+    var timeout;
+    function slideshow() {
         var li = $("ul li");
         if (index < li.length) {
             $(li[index]).click();
@@ -49,7 +50,36 @@
         } else {
             index = 0;
         }
-        setTimeout(slideshow, 3000);
-    })();
+        timeout = setTimeout(slideshow, 3000);
+    };
+    slideshow();
     //TODO: fix missing block on refresh and firefox compatibility
+
+    //pause on hover
+    $(".main_image").hover(function () {
+        clearTimeout(timeout);
+    },
+    function () {
+        setTimeout(slideshow, 3000);
+    });
+
+    //slide bar with text
+    var windowWidth = $("body").width();
+    var elementWidth = $("#text").width();
+    var leftspace = parseInt($("#text").css("left").slice(0,-2));
+    $(window).resize(function () {
+        windowWidth = $("body").width();
+    });//on windows resize recalculate the width
+    (function scroll() {
+        if (leftspace < windowWidth + elementWidth) {
+            $("#text").css({ left: "+=1px" });
+            leftspace++;
+        } else {
+            $("#text").css({ left: -elementWidth });
+            leftspace = 0;
+        }
+        setTimeout(scroll,10);
+    })();
+
+    
 });
