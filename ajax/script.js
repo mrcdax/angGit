@@ -1,7 +1,7 @@
 ﻿$(function(){
     $("#btn").click(function (e) {
         var data = $("#myForm").serialize();
-        console.log("Here: " + data);
+        console.log("Data that will be sent to server: " + data);
         $.ajax({
             url: "process.php",
             type: "POST",

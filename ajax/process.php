@@ -1,4 +1,4 @@
-<div>Result:<br/>
+<div>
   <?php
 if (!empty($_POST))
 {
