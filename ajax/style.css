@@ -1,0 +1,33 @@
+﻿#main{
+    height:400px;
+    width:300px;
+    background:#ccc;
+    padding:10px;
+    margin:auto;
+    position:absolute;
+    top:0;right:0;bottom:0;left:0;
+}
+label{
+    display:block;
+    width:70px;
+    float:left;
+    clear:left;
+    /*padding:10px 0;*/
+}
+span label{
+    width:80px;
+    clear:none;
+}
+input, select{
+  float: left;
+
+}
+#btn{
+    clear:left;
+}
+#result{
+    float:left;
+    background:#ffffff;
+    clear:left;
+    margin-top:10px;
+}

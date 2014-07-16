@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>title</title>
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" media="all" />
+</head>
+<body>
+    <div id="main">
+        <form id="myForm" method="post">
+            <label for="name">Name: </label>
+            <input type="text" name="fname" id="name" placeholder="John Smith" value="Lil' John'"/>
+            <label for="age">Age: </label>
+            <input type="number" name="age" id="age" placeholder="Not underage, right?" value="99"/>
+            <label for="function">Function: </label>
+            <select name="func" id="func">
+                <option value="CEO" selected>CEO</option>
+                <option value="Not CEO">Not CEO</option>
+            </select>
+            <label>Awesome: </label>
+            <span id="radio">
+                <label>Yep<input type="radio" name="awesome" value="Yep" id="yes" checked /></label>
+                <label>No<input type="radio" name="awesome" value="Nope" id="not" /></label>
+            </span>
+            <label>Hobbies: </label>
+            <span id="check">
+                <label>Planking<input type="checkbox" name="hobby[]" value="Planking" id="check1" checked /></label>
+                <label>Owling<input type="checkbox" name="hobby[]" value="Owling" id="check2" /></label>
+            </span>
+            <input type="submit" id="btn" name="btn" value="Submit" />
+        </form>
+        <div id="result"></div>
+    </div>
+
+</body>
+</html>
