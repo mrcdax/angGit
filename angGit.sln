@@ -111,18 +111,25 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		View in browser|Any CPU = View in browser|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{64B8DB51-394D-4967-BE59-25CC8F9091A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64B8DB51-394D-4967-BE59-25CC8F9091A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B8DB51-394D-4967-BE59-25CC8F9091A6}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BD188D7-E5DD-454B-AA41-C2FF418BF657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BD188D7-E5DD-454B-AA41-C2FF418BF657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD188D7-E5DD-454B-AA41-C2FF418BF657}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
 		{02418AFF-F87C-4C03-8CA4-D393FE5FD77D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{02418AFF-F87C-4C03-8CA4-D393FE5FD77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02418AFF-F87C-4C03-8CA4-D393FE5FD77D}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
 		{954C23A6-3A97-465B-9F94-112814357A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{954C23A6-3A97-465B-9F94-112814357A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954C23A6-3A97-465B-9F94-112814357A81}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
 		{237B76D2-9E2F-4DBC-A82B-59588E0EE49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{237B76D2-9E2F-4DBC-A82B-59588E0EE49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237B76D2-9E2F-4DBC-A82B-59588E0EE49B}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
+		{237B76D2-9E2F-4DBC-A82B-59588E0EE49B}.View in browser|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 <div>
-  <?php
+    <?php
 if (!empty($_POST))
 {
  $name = $_POST['fname'];
@@ -16,6 +16,17 @@ if (!empty($_POST))
         echo "<b>".$hobby. " </b>";
      }
   }
+  $fileName = $_FILES['file']['name'];
+  if ($fileName){
+  $tmp_name = $_FILES["file"]["tmp_name"];
+  echo "<br/> File name : <b>".$fileName. "</b>";
+  move_uploaded_file($tmp_name, "img/" .$fileName);
+    echo "<br/> File path : <b>img/" .$fileName."</b>";
+    echo '<br/><img src=/img/'.$fileName.'  width="240">';
+  }else{
+    echo "<br/>No file uploaded";
+  }
+
 }
 ?>
 </div>
