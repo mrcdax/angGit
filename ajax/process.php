@@ -22,7 +22,7 @@ if (!empty($_POST))
   echo "<br/> File name : <b>".$fileName. "</b>";
   move_uploaded_file($tmp_name, "img/" .$fileName);
     echo "<br/> File path : <b>img/" .$fileName."</b>";
-    echo '<br/><img src=/img/'.$fileName.'  width="240">';
+    echo '<br/><img src=/img/'.$fileName.' class="zoomout" width="240">';
   }else{
     echo "<br/>No file uploaded";
   }

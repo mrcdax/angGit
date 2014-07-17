@@ -29,12 +29,17 @@
                     </span>
                     <label>Hobbies: </label>
                     <span id="check">
-                        <label>Planking<input type="checkbox" name="hobby[]" value="Planking" class="nomargin" checked /></label>
                         <label>Owling<input type="checkbox" name="hobby[]" value="Owling" class="nomargin" /></label>
+                        <label>Planking<input type="checkbox" name="hobby[]" value="Planking" class="nomargin" checked /></label>
                     </span>
-                    <input type="file" name="file" accept="image/*" />
+                    <!--<input type="file" name="file" accept="image/*" />-->
+                    <div id="dragdrop">Drag & drop an image here</div>
+                    <div id="bar">
+                        <span>0%</span>
+                        <div id="progress"></div>
+                    </div>
+                    <input type="submit" id="btn" name="btn" value="Submit" />
                 </fieldset>
-                <input type="submit" id="btn" name="btn" value="Submit" />
             </form>
         </div>
         <div class="result">
