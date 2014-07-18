@@ -1,0 +1,1 @@
+Build a new addon with the Firefox addon sdk and use lib/main.js and data/controll.js,play.png
