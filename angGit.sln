@@ -108,6 +108,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ajax", "http://localhost:55
 		SlnRelativePath = "ajax\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ffyoutube", "http://localhost:64115", "{4D9578EC-CA3A-4A03-BF78-8B17CA97BAF9}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64115"
+		Debug.AspNetCompiler.PhysicalPath = "ffyoutube\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64115\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64115"
+		Release.AspNetCompiler.PhysicalPath = "ffyoutube\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64115\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ffyoutube\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,6 +151,10 @@ Global
 		{237B76D2-9E2F-4DBC-A82B-59588E0EE49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{237B76D2-9E2F-4DBC-A82B-59588E0EE49B}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
 		{237B76D2-9E2F-4DBC-A82B-59588E0EE49B}.View in browser|Any CPU.Build.0 = Debug|Any CPU
+		{4D9578EC-CA3A-4A03-BF78-8B17CA97BAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9578EC-CA3A-4A03-BF78-8B17CA97BAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9578EC-CA3A-4A03-BF78-8B17CA97BAF9}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9578EC-CA3A-4A03-BF78-8B17CA97BAF9}.View in browser|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
