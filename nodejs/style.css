@@ -1,0 +1,130 @@
+﻿body{
+    background:#f2f2f2;
+    font-family: "Open Sans", Arial, Helvetica;
+    color:#808080;
+}
+h1{
+  font-size: 30px;
+  text-shadow: 1px 1px 0 #fff;
+  font-weight: 100;
+  color: #969696;
+  text-align:center;
+}
+#container{
+    height:450px;
+    min-width:700px;
+    width:600px;
+    margin:0 auto;
+    /*position:absolute;*/
+    /*top:0;right:0;bottom:0;left:0;*/
+}
+#main{
+    float:left;
+    height:450px;
+    width:50%;
+    min-width:300px;
+    background:#f2f2f2;
+    padding-right:20px;
+    box-sizing:border-box;
+}
+form{
+    float:right;
+}
+label, select, input:not(.nomargin), #result{
+    margin-bottom:10px;
+}
+label{
+    display:block;
+    float:left;
+    clear:left;
+    width:70px;
+}
+span label{
+    width:90px;
+    clear:none;
+}
+input, select{
+  float: left;
+  color:#808080;
+  border: 1px solid #cccccc;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-radius: 4px;
+  background: #e3e3e3;
+}
+#btn{
+    display:block;
+    float:none;
+    width:70px;
+    background:#009aff;
+    color:white;
+    padding:5px 10px;
+    border-radius: 0!important;
+    margin:5px auto 0 auto;
+}
+.result{
+    float:right;
+    width:50%;
+    min-width:300px;
+    background:#f2f2f2;
+    border-left:1px solid #d5d5d5;
+    padding:0 20px;
+    box-sizing: border-box;
+}
+fieldset{
+    min-height:407px;
+    border:1px solid #cccccc;
+}
+#dragdrop{
+    clear:left;
+    height:200px;
+    width:250px;
+    background:white;
+    line-height:200px;
+    font-weight:bold;
+    text-align:center;
+    margin:5px auto 0 auto;
+    border:1px dashed #009aff;
+    cursor:default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#bar{
+    display:none;
+    height:15px;
+    width:242px;
+    border:1px solid #009aff;
+    margin-top:5px;
+    padding:4px;
+    text-align:center;
+}
+#progress {
+    clear: left;
+    background: #009aff;
+    height: 15px;
+    width: 0;
+}
+#bar span{
+    color:black;
+    font-size:12px;
+    position:absolute;
+    z-index:1;
+}
+.zoomout{
+    width:290px;
+    height:auto;
+    margin:0 auto;
+    border:1px solid #009aff;
+}
+.zoomin{
+    position:absolute;
+    width:auto;
+    top:30px;
+    right:0;
+    bottom:0;
+    left:0;
+    box-shadow:0 0 13px 0 rgba(50, 50, 50, 1);
+}

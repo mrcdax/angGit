@@ -40,6 +40,7 @@
         $("#bar").show();
         e.preventDefault();
         file = e.originalEvent.dataTransfer.files;
+        //data.append('file', file[0]);
     });
 
     //prevent opening in new window when dragging outside the area
@@ -55,7 +56,8 @@
     function handleFile(e, file) {
         console.log("Data that will be sent to server: " + data);
         $.ajax({
-            url: "process.php",
+            url: 'http://127.0.0.1:1338/',
+            //url: "process.php",
             type: "POST",
             processData: false,
             contentType: false,
