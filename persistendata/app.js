@@ -1,6 +1,6 @@
 ﻿$(function () {
     var db = new PouchDB('notesdb');
-    var remoteCouch = 'https://notepad.iriscouch.com/';
+    var remoteCouch = 'https://notepad.iriscouch.com/notepad';
 
     //no. of notes max=13
     function noofnotes() {
@@ -99,6 +99,15 @@
             });
         });       
     });
+
+    //syncronize with iriscouch in cloud
+    function sync() {
+        //syncDom.setAttribute('data-sync-state', syncing);
+        var opts = { live: true ,};
+        db.replicate.to(remoteCouch, opts);
+        db.replicate.from(remoteCouch, opts);
+    }
+    sync();
     //PouchDB.destroy('notesdb', function (err, info) { console.log(err + info); });
 
 });
