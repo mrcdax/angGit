@@ -171,6 +171,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "persistendata", "http://loc
 		SlnRelativePath = "persistendata\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "notesextension", "http://localhost:32722", "{C60A9F92-C30C-45E8-8A66-38EA2F20E804}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_32722"
+		Debug.AspNetCompiler.PhysicalPath = "notesextension\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_32722\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_32722"
+		Release.AspNetCompiler.PhysicalPath = "notesextension\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_32722\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "notesextension\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -205,6 +226,10 @@ Global
 		{B377AB2C-E5D5-4D50-B34A-07B5BD8366C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B377AB2C-E5D5-4D50-B34A-07B5BD8366C9}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
 		{B377AB2C-E5D5-4D50-B34A-07B5BD8366C9}.View in browser|Any CPU.Build.0 = Debug|Any CPU
+		{C60A9F92-C30C-45E8-8A66-38EA2F20E804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60A9F92-C30C-45E8-8A66-38EA2F20E804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C60A9F92-C30C-45E8-8A66-38EA2F20E804}.View in browser|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60A9F92-C30C-45E8-8A66-38EA2F20E804}.View in browser|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
