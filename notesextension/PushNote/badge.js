@@ -2,35 +2,34 @@
 $(function () {
     var db = new PouchDB('notesdb');
     var remoteCouch = 'https://notepad.iriscouch.com/pushnote';
-    var oldbadge = 0;
+    var checkInterval = parseInt(localStorage.getItem('checkInterval')) * 1000;
+    var interval;
 
-    //check for changes
-    db.info(function (err, info) {
-        db.changes({
-            since: info.update_seq,
-            live: true
-        }).on('change', showNotes);
+    //listen for messages from popup and modify the check interval 
+    chrome.runtime.onMessage.addListener(
+    function (request) {
+        console.log(request);
+        clearInterval(interval);
+        checkInterval = parseInt(request) * 1000;
+        interval = setInterval(intervalFunction, checkInterval);
     });
-    //send the number of notes to chrome badge
-    function newNotes(number) {
-        number = number || '';
-        chrome.browserAction.setBadgeText({ text: number });
-    };
-    //get the number of notes for badge
-    function showNotes() {
+
+    ////replicationfilter function
+    //function filterByUserPass(doc) {
+    //    //console.log(doc);
+    //    if (doc.notetext=='123') {
+    //        console.log("filter:" + doc);
+    //        return true;
+    //    }
+    //}
+    //setup the check interval for new notes on cloud
+    function intervalFunction() {
+        db.replicate.from(remoteCouch, { continous: false/*, filter:filterByUserPass  */});
         db.allDocs({ include_docs: true, descending: true }, function (error, doc) {
-            if (oldbadge < doc.rows.length) {
-                newNotes(doc.rows.length - oldbadge + '');
-                console.log(doc.rows.length - oldbadge + '');
-                oldbadge = doc.rows.length;
-            }
+            console.log("Doc:" + doc + "or error:" + error);
+            chrome.browserAction.setBadgeText({ text: doc.rows.length + '' });
         });
     };
 
-    //sync with the cloud
-    function sync() {
-        var opts = { live: true };
-        db.replicate.from(remoteCouch, opts);
-    }
-    sync();
+    interval = setInterval(intervalFunction, checkInterval);
 })

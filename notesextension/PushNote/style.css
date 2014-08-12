@@ -23,26 +23,36 @@ textarea{
     overflow:auto;
     text-overflow:ellipsis;
 }
-#button{
+.button{
     width:360px;
     color:white;
     background:#0082ff;
     border:0;
 }
-#button:hover{
+.button:hover{
     color:white;
     background:#0174e2;
 }
-#button:active{
+.button:active{
     color:#0082ff;
     background:white; 
 }
-#hidetextarea{
+#buttonSave{
+    width:70px;
+    position:absolute;
+    bottom:5px;
+    right:10px;
+
+}
+#hidetextarea, #options{
     display:inline-block;
     float:left;
     font-size:10px;
     color:#0082ff;
     text-decoration:none;
+}
+#options{
+    float:right;
 }
 ul{
     display:inline-block;
@@ -79,4 +89,29 @@ li{
 }
 img{
     display:none;
+}
+#optionWindow{
+    display:none;
+    position:absolute;
+    width:280px;
+    height:100px;
+    color:#1d1d1d;
+    /*text-align:center;*/
+    background:white;
+    top:auto;right:40px;bottom:auto;left:40px;
+    z-index:1;
+    border:1px solid #0082ff;
+    box-shadow:0px 1px 21px 0px rgba(50, 50, 50, 0.75);
+    padding:10px;
+}
+.labels{
+    float:left;
+}
+label{
+    line-height:25px;
+}
+.inputs{
+    float:right;
+    width:80px;
+    margin-right:75px;
 }

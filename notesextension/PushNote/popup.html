@@ -6,16 +6,31 @@
      <script src="lib/jquery-2.1.1.js"></script>
      <script src="lib/pouchdb-2.2.3.min.js"></script>
       <script src="lib/jquery.cookie.js"></script>
+      <script src="lib/jquery.md5.js"></script>
     <script src=" popup.js"></script>
-      <script src="badge.js"></script>
+      <!--<script src="badge.js"></script>-->
   </head>
 <body>
+    <div id="optionWindow">
+        <div class="labels">
+            <label>Check interval: </label><br />
+            <label>User: </label><br />
+            <label>Password: </label><br />
+        </div>
+        <div class="inputs">
+            <input type="text" id="config" title="Check for new notes every X seconds." placeholder="Seconds" />
+            <input type="text" id="user" />
+            <input type="password" id="password" maxlength="15" />
+        </div>
+        <input type="button" id="buttonSave" class="button nospaces" value="Save" />
+    </div>
     <div id="input">
         <div class="title">PushNote</div>
             <a href="#" id="hidetextarea" class="nospaces">Hide ▼</a>
+        <a href="#" id="options" class="nospaces">Options</a>
         <span class="hidable">
             <textarea id="notetopush" rows=15 cols=45 placeholder="Add some text here and hit 'Push'."></textarea>
-            <input type="button" id="button" class="nospaces" value="Push" />
+            <input type="button" id="button" class="button nospaces" value="Push" />
         </span>
 </div>
     <div id="notesfromdb"></div>
