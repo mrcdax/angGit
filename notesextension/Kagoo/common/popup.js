@@ -1,15 +1,6 @@
 ﻿$(function () {
     var db = new PouchDB('notesdb');
     var remoteCouch = 'https://notepad.iriscouch.com/pushnote';
-    var badgeOnOpen;
-
-    //refresh UI on data change in cloud
-    //db.info(function (err, info) {
-    //    db.changes({
-    //        since: info.update_seq,
-    //        live: true
-    //    }).on('change', showNotes);
-    //});
 
     //push note to db
     $(".hidable").on("click", "#button", function () {
@@ -20,8 +11,6 @@
         var note = {
             _id: $.now().toString(),
             notetext: $("#notetopush").val()
-            //user: $("#user").val(),
-            //pass: $.md5($("#config").val())
         };
         db.put(note, function callback(err, result) {
             if (!err) {
@@ -31,19 +20,11 @@
                 $("#notetopush").val("");
             } else {
                 callback();
-                console.log("Could not insert the note." + err)
+                console.log("Could not insert the note...retrying" + err)
             }
         });
     });
 
-    //replicationfilter funstion
-    //function filterByUserPass(doc) {
-    //    //console.log(doc);
-    //    if (doc.notetext == '123') {
-    //        console.log("filter:" + doc);
-    //        return false;
-    //    }
-    //}
     //show notes
     function showNotes() {
         db.replicate.from(remoteCouch/*, {filter:filterByUserPass }*/);//get the data from cloud
@@ -52,32 +33,18 @@
             for (var i = 0; i < doc.rows.length; i++) {
                 $('ul').append("<li><a href='#note" + doc.rows[i].doc._id + "' title='Show note'>" + doc.rows[i].doc.notetext + "</a><img id='delete" + doc.rows[i].doc._id + "' src='delete.png' title='Delete'></img></li>");
             };
-            chrome.browserAction.setBadgeText({ text: doc.rows.length + '' });
+            kango.ui.browserButton.setBadgeValue(doc.rows.length);//kangoo cross browser api
         });
     };
     showNotes();
 
-
     //save check interval, user,pass
     $("#buttonSave").click(function () {
-        localStorage.setItem("checkInterval", $("#config").val());
-        //localStorage.setItem("user", $("#user").val());
-        //localStorage.setItem("pass", $("#pass").val());
-        $("#optionWindow").slideToggle('slow');
-
+        $("#optionWindow").css("display", "none");//ff
+        kango.storage.setItem("checkInterval", $("#config").val());//ff
         //send message to background
-        chrome.runtime.sendMessage($("#config").val(), function (response) {
-            console.log(response);
-        });
+        kango.dispatchMessage('Content2Background', $("#config").val());
     });
-
-    //syncronize local db with iriscouch db in cloud
-    //function sync() {
-    //    var opts = { live: true };
-    //    //db.replicate.from(remoteCouch, opts);
-    //    //db.replicate.to(remoteCouch, opts);
-    //}
-    //sync();
 
     ////delete button on li hover
     $("#notesfromdb").on('click', 'img', function () {
@@ -127,26 +94,14 @@
         });
     });
 
-
-    (function () {
-        chrome.browserAction.getBadgeText({}, function (result) {
-            badgeOnOpen = result;
-        });
-    })();
-
     //show options on click
-    $("#options").click(function () {
-        $("#config").val(localStorage.getItem("checkInterval"));
-        $("#optionWindow").slideToggle('slow');
+    $("#options").click(function (e) {
+        $("#optionWindow").css("display", "inline-block")
+        $("#config").val(kango.storage.getItem("checkInterval"));//ff
     });
 
     //while the popup is open, check for changes in cloud every second and show them if they exist
     setInterval(function () {
-        chrome.browserAction.getBadgeText({}, function (result) {
-            var badgeNow = result;
-            if (badgeNow !== badgeOnOpen) {
-                showNotes();
-            }
-        });
-    }, 1000);
+          showNotes();
+    }, parseInt(kango.storage.getItem("checkInterval")));
 });

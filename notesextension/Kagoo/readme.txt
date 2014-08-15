@@ -1,0 +1,1 @@
+Install kangoo and paste common folder in C:\Users\rmitrea\Downloads\JS\kangoext\kango-framework-latest\PushNote\src then build it

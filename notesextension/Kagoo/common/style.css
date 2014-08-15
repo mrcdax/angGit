@@ -24,7 +24,7 @@ textarea{
     text-overflow:ellipsis;
 }
 .button{
-    width:360px;
+    width:357px;
     color:white;
     background:#0082ff;
     border:0;
@@ -96,7 +96,7 @@ img{
     width:280px;
     height:100px;
     color:#1d1d1d;
-    /*text-align:center;*/
+    text-align:center;
     background:white;
     top:auto;right:40px;bottom:auto;left:40px;
     z-index:1;

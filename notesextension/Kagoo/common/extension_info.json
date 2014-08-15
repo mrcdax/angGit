@@ -1,0 +1,16 @@
+{
+    "content_scripts": [], 
+    "description": "Send a note to every browser with the extension installed", 
+    "creator": "Kango", 
+    "background_scripts": [
+        "main.js"
+    ], 
+    "homepage_url": "http://kangoextensions.com/", 
+    "version": "1.0.1", 
+    "browser_button": {
+        "caption": "PushNote", 
+        "icon": "icons/button.png", 
+        "tooltipText": "PushNote"
+    }, 
+    "name": "PushNote"
+}
